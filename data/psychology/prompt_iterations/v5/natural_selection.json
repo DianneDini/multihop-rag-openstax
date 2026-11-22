@@ -1,0 +1,68 @@
+{
+  "experiment": {
+    "created_at": "2026-10-28T19:51:32.765370+07:00",
+    "query": "Natural Selection",
+    "book_title": "Psychology 2e",
+    "query_tokens": 2,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v5",
+    "language": "English",
+    "temperature": 1.0,
+    "thinking_config": {
+      "thinking_level": "minimal"
+    },
+    "few_shot": false,
+    "max_question_words": 40,
+    "variants": [
+      "non_cot",
+      "cot"
+    ]
+  },
+  "retrieval": {
+    "pair_evaluation": {
+      "chapter_distance": 6,
+      "pair_similarity": 0.4962143898010254,
+      "threshold": 0.5,
+      "threshold_status": "tested",
+      "chapter_condition": true,
+      "similarity_condition": false,
+      "is_valid": false,
+      "relevance_rule": "query_percentile >= 95.0",
+      "anchor_query_similarity": 0.4430362284183502,
+      "partner_query_similarity": 0.31505507230758667,
+      "anchor_query_percentile": 99.88492520138091,
+      "partner_query_percentile": 99.5397008055236,
+      "anchor_relevant": true,
+      "partner_relevant": true,
+      "is_relevant": true,
+      "is_valid_and_relevant": false,
+      "partner_ranking": "query",
+      "selection_info": {
+        "selection": "rank_then_evaluate",
+        "n_candidates": 20,
+        "n_candidates_above_threshold": null,
+        "fallback": false
+      }
+    },
+    "source_a": {
+      "vector_id": "psychology_2e_chunk_00024",
+      "chapter_number": 1,
+      "chapter_title": "Introduction to Psychology",
+      "section": "Biopsychology and Evolutionary Psychology",
+      "query_similarity": 0.4430362284183502,
+      "query_percentile": 99.88492520138091,
+      "text": "Evolutionary psychology, and specifically, the evolutionary psychology of humans, has enjoyed a resurgence in recent decades. To be subject to evolution by natural selection, a behavior must have a significant genetic cause. In general, we expect all human cultures to express a behavior if it is caused genetically, since the genetic differences among human groups are small. The approach taken by most evolutionary psychologists is to predict the outcome of a behavior in a particular situation based on evolutionary theory and then to make observations, or conduct experiments, to determine whether the results match the theory. It is important to recognize that these types of studies are not strong evidence that a behavior is adaptive, since they lack information that the behavior is in some part genetic and not entirely cultural (Endler, 1986). Demonstrating that a trait, especially in humans, is naturally selected is extraordinarily difficult; perhaps for this reason, some evolutionary psychologists are content to assume the behaviors they study have genetic determinants (Confer et al., 2010).\n\nOne other drawback of evolutionary psychology is that the traits that we possess now evolved under environmental and social conditions far back in human history, and we have a poor understanding of what these conditions were. This makes predictions about what is adaptive for a behavior difficult. Behavioral traits need not be adaptive under current conditions, only under the conditions of the past when they evolved, about which we can only hypothesize.\n\nThere are many areas of human behavior for which evolution can make predictions. Examples include memory, mate choice, relationships between kin, friendship and cooperation, parenting, social organization, and status (Confer et al., 2010).\n\nEvolutionary psychologists have had success in finding experimental correspondence between observations and expectations. In one example, in a study of mate preference differences between men and women that spanned 37 cultures, Buss (1989) found that women valued earning potential factors greater than men, and men valued potential reproductive factors (youth and attractiveness) greater than women in their prospective mates. In general, the predictions were in line with the predictions of evolution, although there were deviations in some cultures."
+    },
+    "source_b": {
+      "vector_id": "psychology_2e_chunk_00333",
+      "chapter_number": 7,
+      "chapter_title": "Thinking and Intelligence",
+      "section": "High Intelligence: Nature or Nurture?",
+      "query_similarity": 0.31505507230758667,
+      "query_percentile": 99.5397008055236,
+      "text": "The reality is that aspects of each idea are probably correct. In fact, one study suggests that although genetics seem to be in control of the level of intelligence, the environmental influences provide both stability and change to trigger manifestation of cognitive abilities (Bartels, Rietveld, Van Baal, & Boomsma, 2002). Certainly, there are behaviors that support the development of intelligence, but the genetic component of high intelligence should not be ignored. As with all heritable traits, however, it is not always possible to isolate how and when high intelligence is passed on to the next generation.\n\nRange of Reaction is the theory that each person responds to the environment in a unique way based on their genetic makeup. According to this idea, your genetic potential is a fixed quantity, but whether you reach your full intellectual potential is dependent upon the environmental stimulation you experience, especially in childhood. Think about this scenario: A couple adopts a child who has average genetic intellectual potential. They raise her in an extremely stimulating environment. What will happen to the couple’s new daughter? It is likely that the stimulating environment will improve her intellectual outcomes over the course of her life. But what happens if this experiment is reversed? If a child with an extremely strong genetic background is placed in an environment that does not stimulate him: What happens? Interestingly, according to a longitudinal study of highly gifted individuals, it was found that “the two extremes of optimal and pathological experience are both represented disproportionately in the backgrounds of creative individuals”; however, those who experienced supportive family environments were more likely to report being happy (Csikszentmihalyi & Csikszentmihalyi, 1993, p. 187)."
+    }
+  },
+  "skipped_reason": "pair_not_valid",
+  "results": []
+}

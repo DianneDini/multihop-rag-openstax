@@ -1,0 +1,9 @@
+﻿concept,variant,skipped_reason,chapter_a,chapter_b,chapter_distance,pair_similarity,partner_query_percentile,is_valid,is_relevant,status,question_word_count,connection_type,quality_flags,output_tokens,thinking_tokens,error,question
+Naturalistic Observation,non_cot,,2,6,4,0.5352,99.7,True,True,insufficient_sources,0,,,28,0,,
+Naturalistic Observation,cot,,2,6,4,0.5352,99.7,True,True,insufficient_sources,0,none,,324,0,,
+Natural Selection,-,pair_not_valid,1,7,6,0.4962,99.5,False,True,,,,,,,,
+Endocrine System,non_cot,,3,14,11,0.5283,99.8,True,True,success,20,,,139,0,,How does the extended release of cortisol during stress illustrate the general characteristics of hormonal signaling compared to neurotransmitter signaling?
+Endocrine System,cot,,3,14,11,0.5283,99.8,True,True,success,19,is an example or application of,,580,0,,How do general endocrine system characteristics enable the HPA axis to produce widespread bodily effects during the stress response?
+Insomnia,-,pair_not_valid,4,15,11,0.331,97.1,False,True,,,,,,,,
+Cognition,non_cot,,7,1,6,0.7305,99.8,True,True,insufficient_sources,0,,,28,0,,
+Cognition,cot,,7,1,6,0.7305,99.8,True,True,success,26,extends,,508,0,,How does the study of cognitions in relation to experiences and actions encompass the measurement of intelligence and the impact of emotional intelligence on workplace success?

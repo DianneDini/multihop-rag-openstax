@@ -1,0 +1,68 @@
+{
+  "experiment": {
+    "created_at": "2026-10-28T19:52:08.602614+07:00",
+    "query": "Insomnia",
+    "book_title": "Psychology 2e",
+    "query_tokens": 2,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v5",
+    "language": "English",
+    "temperature": 1.0,
+    "thinking_config": {
+      "thinking_level": "minimal"
+    },
+    "few_shot": false,
+    "max_question_words": 40,
+    "variants": [
+      "non_cot",
+      "cot"
+    ]
+  },
+  "retrieval": {
+    "pair_evaluation": {
+      "chapter_distance": 11,
+      "pair_similarity": 0.3310084939002991,
+      "threshold": 0.5,
+      "threshold_status": "tested",
+      "chapter_condition": true,
+      "similarity_condition": false,
+      "is_valid": false,
+      "relevance_rule": "query_percentile >= 95.0",
+      "anchor_query_similarity": 0.5658475756645203,
+      "partner_query_similarity": 0.30257704854011536,
+      "anchor_query_percentile": 99.88492520138091,
+      "partner_query_percentile": 97.12313003452245,
+      "anchor_relevant": true,
+      "partner_relevant": true,
+      "is_relevant": true,
+      "is_valid_and_relevant": false,
+      "partner_ranking": "query",
+      "selection_info": {
+        "selection": "rank_then_evaluate",
+        "n_candidates": 20,
+        "n_candidates_above_threshold": null,
+        "fallback": false
+      }
+    },
+    "source_a": {
+      "vector_id": "psychology_2e_chunk_00167",
+      "chapter_number": 4,
+      "chapter_title": "States of Consciousness",
+      "section": "Insomnia",
+      "query_similarity": 0.5658475756645203,
+      "query_percentile": 99.88492520138091,
+      "text": "Insomnia, a consistent difficulty in falling or staying asleep, is the most common of the sleep disorders. Individuals with insomnia often experience long delays between the times that they go to bed and actually fall asleep. In addition, these individuals may wake up several times during the night only to find that they have difficulty getting back to sleep. As mentioned earlier, one of the criteria for insomnia involves experiencing these symptoms for at least three nights a week for at least one month’s time (Roth, 2007).\n\nIt is not uncommon for people suffering from insomnia to experience increased levels of anxiety about their inability to fall asleep. This becomes a self-perpetuating cycle because increased anxiety leads to increased arousal, and higher levels of arousal make the prospect of falling asleep even more unlikely. Chronic insomnia is almost always associated with feeling overtired and may be associated with symptoms of depression.\n\nThere may be many factors that contribute to insomnia, including age, drug use, exercise, mental status, and bedtime routines. Not surprisingly, insomnia treatment may take one of several different approaches. People who suffer from insomnia might limit their use of stimulant drugs (such as caffeine) or increase their amount of physical exercise during the day. Some people might turn to over-the-counter (OTC) or prescribed sleep medications to help them sleep, but this should be done sparingly because many sleep medications result in dependence and alter the nature of the sleep cycle, and they can increase insomnia over time. Those who continue to have insomnia, particularly if it affects their quality of life, should seek professional treatment.\n\nSome forms of psychotherapy, such as cognitive-behavioral therapy, can help sufferers of insomnia. Cognitive-behavioral therapy is a type of psychotherapy that focuses on cognitive processes and problem behaviors. The treatment of insomnia likely would include stress management techniques and changes in problematic behaviors that could contribute to insomnia (e.g., spending more waking time in bed). Cognitive-behavioral therapy has been demonstrated to be quite effective in treating insomnia (Savard, Simard, Ivers, & Morin, 2005; Williams, Roth, Vatthauer, & McCrae, 2013).\n\nHas something like this ever happened to you? My sophomore college housemate got so stressed out during finals sophomore year he drank almost a whole bottle of Nyquil to try to fall asleep. When he told me, I made him go see the college therapist."
+    },
+    "source_b": {
+      "vector_id": "psychology_2e_chunk_00876",
+      "chapter_number": 15,
+      "chapter_title": "Psychological Disorders",
+      "section": "Symptoms of Schizophrenia",
+      "query_similarity": 0.30257704854011536,
+      "query_percentile": 97.12313003452245,
+      "text": "Disorganized thinking refers to disjointed and incoherent thought processes—usually detected by what a person says. The person might ramble, exhibit loose associations (jump from topic to topic), or talk in a way that is so disorganized and incomprehensible that it seems as though the person is randomly combining words. Disorganized thinking is also exhibited by blatantly illogical remarks (e.g., “Fenway Park is in Boston. I live in Boston. Therefore, I live at Fenway Park.”) and by tangentiality: responding to others’ statements or questions by remarks that are either barely related or unrelated to what was said or asked. For example, if a person diagnosed with schizophrenia is asked if they are interested in receiving special job training, they might state that they once rode on a train somewhere. To a person with schizophrenia, the tangential (slightly related) connection between job training and riding a train are sufficient enough to cause such a response.\n\nDisorganized or abnormal motor behavior refers to unusual behaviors and movements: becoming unusually active, exhibiting silly child-like behaviors (giggling and self-absorbed smiling), engaging in repeated and purposeless movements, or displaying odd facial expressions and gestures. In some cases, the person will exhibit catatonic behaviors, which show decreased reactivity to the environment, such as posturing, in which the person maintains a rigid and bizarre posture for long periods of time, or catatonic stupor, a complete lack of movement and verbal behavior.\n\nNegative symptoms are those that reflect noticeable decreases and absences in certain behaviors, emotions, or drives (Green, 2001). A person who exhibits diminished emotional expression shows no emotion in their facial expressions, speech, or movements, even when such expressions are normal or expected. Avolition is characterized by a lack of motivation to engage in self-initiated and meaningful activity, including the most basic of tasks, such as bathing and grooming. Alogia refers to reduced speech output; in simple terms, patients do not say much. Another negative symptom is asociality, or social withdrawal and lack of interest in engaging in social interactions with others. A final negative symptom, anhedonia, refers to an inability to experience pleasure. One who exhibits anhedonia expresses little interest in what most people consider to be pleasurable activities, such as hobbies, recreation, or sexual activity."
+    }
+  },
+  "skipped_reason": "pair_not_valid",
+  "results": []
+}

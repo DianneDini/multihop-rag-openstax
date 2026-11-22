@@ -1,0 +1,142 @@
+{
+  "experiment": {
+    "created_at": "2026-10-28T19:52:19.381842+07:00",
+    "query": "Cognition",
+    "book_title": "Psychology 2e",
+    "query_tokens": 2,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v5",
+    "language": "English",
+    "temperature": 1.0,
+    "thinking_config": {
+      "thinking_level": "minimal"
+    },
+    "few_shot": false,
+    "max_question_words": 40,
+    "variants": [
+      "non_cot",
+      "cot"
+    ]
+  },
+  "retrieval": {
+    "pair_evaluation": {
+      "chapter_distance": 6,
+      "pair_similarity": 0.7305434346199036,
+      "threshold": 0.5,
+      "threshold_status": "tested",
+      "chapter_condition": true,
+      "similarity_condition": true,
+      "is_valid": true,
+      "relevance_rule": "query_percentile >= 95.0",
+      "anchor_query_similarity": 0.6133273839950562,
+      "partner_query_similarity": 0.5173143744468689,
+      "anchor_query_percentile": 99.88492520138091,
+      "partner_query_percentile": 99.76985040276179,
+      "anchor_relevant": true,
+      "partner_relevant": true,
+      "is_relevant": true,
+      "is_valid_and_relevant": true,
+      "partner_ranking": "query",
+      "selection_info": {
+        "selection": "rank_then_evaluate",
+        "n_candidates": 20,
+        "n_candidates_above_threshold": null,
+        "fallback": false
+      }
+    },
+    "source_a": {
+      "vector_id": "psychology_2e_chunk_00290",
+      "chapter_number": 7,
+      "chapter_title": "Thinking and Intelligence",
+      "section": "Cognition",
+      "query_similarity": 0.6133273839950562,
+      "query_percentile": 99.88492520138091,
+      "text": "Upon waking each morning, you begin thinking—contemplating the tasks that you must complete that day. In what order should you run your errands? Should you go to the bank, the cleaners, or the grocery store first? Can you get these things done before you head to class or will they need to wait until school is done? These thoughts are one example of cognition at work. Exceptionally complex, cognition is an essential feature of human consciousness, yet not all aspects of cognition are consciously experienced.\n\nCognitive psychology is the field of psychology dedicated to examining how people think. It attempts to explain how and why we think the way we do by studying the interactions among human thinking, emotion, creativity, language, and problem solving, in addition to other cognitive processes. Cognitive psychologists strive to determine and measure different types of intelligence, why some people are better at problem solving than others, and how emotional intelligence affects success in the workplace, among countless other topics. They also sometimes focus on how we organize thoughts and information gathered from our environments into meaningful categories of thought, which will be discussed later."
+    },
+    "source_b": {
+      "vector_id": "psychology_2e_chunk_00026",
+      "chapter_number": 1,
+      "chapter_title": "Introduction to Psychology",
+      "section": "Cognitive Psychology",
+      "query_similarity": 0.5173143744468689,
+      "query_percentile": 99.76985040276179,
+      "text": "As mentioned in the previous section, the cognitive revolution created an impetus for psychologists to focus their attention on better understanding the mind and mental processes that underlie behavior. Thus, cognitive psychology is the area of psychology that focuses on studying cognitions, or thoughts, and their relationship to our experiences and our actions. Like biological psychology, cognitive psychology is broad in its scope and often involves collaborations among people from a diverse range of disciplinary backgrounds. This has led some to coin the term cognitive science to describe the interdisciplinary nature of this area of research (Miller, 2003).\n\nCognitive psychologists have research interests that span a spectrum of topics, ranging from attention to problem solving to language to memory. The approaches used in studying these topics are equally diverse. Given such diversity, cognitive psychology is not captured in one chapter of this text per se; rather, various concepts related to cognitive psychology will be covered in relevant portions of the chapters in this text on sensation and perception, thinking and intelligence, memory, lifespan development, social psychology, and therapy."
+    }
+  },
+  "skipped_reason": null,
+  "results": [
+    {
+      "variant": "non_cot",
+      "query": "Cognition",
+      "model_requested": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "v5",
+      "language": "English",
+      "temperature": 1.0,
+      "thinking_config": {
+        "thinking_level": "minimal"
+      },
+      "few_shot": false,
+      "max_question_words": 40,
+      "status": "insufficient_sources",
+      "question": "",
+      "answer_key": "",
+      "reasoning": null,
+      "overridden_output": null,
+      "quality_flags": [],
+      "question_word_count": 0,
+      "finish_reason": "STOP",
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 28,
+        "thinking_tokens": 0,
+        "total_tokens": 1056
+      },
+      "prompt": "\nYou are an educational question-generation assistant.\n\nYour task is to generate one high-quality multi-hop analytical\nquestion using the two supplied textbook excerpts.\n\nRead both sources and directly produce the final question and\nits answer key.\n\nOUTPUT FIELDS\n- status\n- question\n- answer_key\n\n\nGENERAL RULES\n\n1. Write all output fields in English.\n\n2. Generate exactly one open-ended analytical question.\n\n3. The question must require information from BOTH sources.\n   It must not be fully answerable from either source alone.\n   Every part of the question must depend on the combination,\n   not on one source with a detail from the other attached.\n\n4. The question must require analysis, explanation, comparison,\n   application, or evaluation rather than simple recall.\n\n5. Each source must contribute information that the other source\n   does not contain. If one source only repeats the other, return\n   status \"insufficient_sources\".\n\n6. The relationship between the sources must be specific: one\n   source \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\" the other. Sharing a topic is NOT a relationship.\n   If the only link is a shared topic, return\n   status \"insufficient_sources\".\n\n7. Do not merely place two facts side by side. The answer key must\n   state a conclusion that cannot be reached from either source\n   alone, and show how both sources lead to it.\n\n8. Use only facts, terms, and examples that appear in the sources.\n   Do not introduce concepts or terminology from outside the sources.\n   Do not exaggerate what the sources say.\n\n9. Do not state or imply that one concept causes, explains, or\n   leads to another unless the sources explicitly support that\n   relationship.\n\n10. The question must be self-contained, at most 40\n    words, and understandable without reading the sources.\n    Do not mention \"Source A\", \"Source B\", \"the text\", or \"the passage\".\n    Do not tell the learner how to structure the answer or which\n    ideas to combine.\n\n11. Source labels may be used in the answer key only.\n\n12. If the sources do not support a coherent analytical question\n    requiring both sources, return:\n    status = \"insufficient_sources\"\n    question = \"\"\n    answer_key = \"\"\n\n13. If status is \"success\", question and answer_key must both\n    contain meaningful text.\n\n14. Return only the structured JSON output required by the schema.\n\n\nNOW THE ACTUAL SOURCES\n\nSOURCE A\nChapter: 7\nSection: Cognition\n\nUpon waking each morning, you begin thinking—contemplating the tasks that you must complete that day. In what order should you run your errands? Should you go to the bank, the cleaners, or the grocery store first? Can you get these things done before you head to class or will they need to wait until school is done? These thoughts are one example of cognition at work. Exceptionally complex, cognition is an essential feature of human consciousness, yet not all aspects of cognition are consciously experienced.\n\nCognitive psychology is the field of psychology dedicated to examining how people think. It attempts to explain how and why we think the way we do by studying the interactions among human thinking, emotion, creativity, language, and problem solving, in addition to other cognitive processes. Cognitive psychologists strive to determine and measure different types of intelligence, why some people are better at problem solving than others, and how emotional intelligence affects success in the workplace, among countless other topics. They also sometimes focus on how we organize thoughts and information gathered from our environments into meaningful categories of thought, which will be discussed later.\n\n\nSOURCE B\nChapter: 1\nSection: Cognitive Psychology\n\nAs mentioned in the previous section, the cognitive revolution created an impetus for psychologists to focus their attention on better understanding the mind and mental processes that underlie behavior. Thus, cognitive psychology is the area of psychology that focuses on studying cognitions, or thoughts, and their relationship to our experiences and our actions. Like biological psychology, cognitive psychology is broad in its scope and often involves collaborations among people from a diverse range of disciplinary backgrounds. This has led some to coin the term cognitive science to describe the interdisciplinary nature of this area of research (Miller, 2003).\n\nCognitive psychologists have research interests that span a spectrum of topics, ranging from attention to problem solving to language to memory. The approaches used in studying these topics are equally diverse. Given such diversity, cognitive psychology is not captured in one chapter of this text per se; rather, various concepts related to cognitive psychology will be covered in relevant portions of the chapters in this text on sensation and perception, thinking and intelligence, memory, lifespan development, social psychology, and therapy.\n\n\nGenerate the final output now.\n",
+      "raw_response": "{\n  \"status\": \"insufficient_sources\",\n  \"question\": \"\",\n  \"answer_key\": \"\"\n}",
+      "error": null
+    },
+    {
+      "variant": "cot",
+      "query": "Cognition",
+      "model_requested": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "v5",
+      "language": "English",
+      "temperature": 1.0,
+      "thinking_config": {
+        "thinking_level": "minimal"
+      },
+      "few_shot": false,
+      "max_question_words": 40,
+      "status": "success",
+      "question": "How does the study of cognitions in relation to experiences and actions encompass the measurement of intelligence and the impact of emotional intelligence on workplace success?",
+      "answer_key": "Source A establishes that cognitive psychology examines thinking, emotion, and problem solving, specifically striving to measure intelligence types and how emotional intelligence affects workplace success. Source B extends this by defining cognitive psychology as the study of cognitions and their relationship to experiences and actions, and notes its broad, interdisciplinary scope. Combining both sources leads to the conclusion that measuring intelligence and evaluating emotional intelligence in the workplace are applications of studying how internal thoughts and emotions relate to our external experiences and actions within a broad scientific framework.",
+      "reasoning": {
+        "concept_a": "Cognition and cognitive psychology, focusing on how humans think, interactions among thinking, emotion, creativity, language, and problem solving, and organizing thoughts into categories.",
+        "concept_b": "Cognitive psychology as the study of cognitions or thoughts and their relationship to experiences and actions, and its broad, interdisciplinary nature leading to the term cognitive science.",
+        "unique_to_a": "Cognitive psychologists strive to determine and measure different types of intelligence, why some people are better at problem solving than others, and how emotional intelligence affects success in the workplace.",
+        "unique_to_b": "Cognitive psychology focuses on studying cognitions and their relationship to our experiences and our actions, and involves collaborations from diverse backgrounds leading to the term cognitive science.",
+        "connection_type": "extends",
+        "connection": "Source B extends the general definition and scope of cognitive psychology presented in Source A by introducing its interdisciplinary nature, termed cognitive science, and its specific focus on the relationship between thoughts, experiences, and actions.",
+        "question_design": "Draft: How do the measurement of intelligence and emotional intelligence in the workplace relate to the study of cognitions and their connection to experiences and actions? Target Bloom level: Analyze. Forces the use of unique details from both sources by combining workplace emotional intelligence/intelligence measurement with the study of thoughts, experiences, and actions.",
+        "single_source_check": "Source A alone lacks the explicit focus on the relationship between thoughts, experiences, and actions and the interdisciplinary term cognitive science. Source B alone lacks the specific details on measuring intelligence and emotional intelligence in the workplace. Neither source alone can answer the draft question."
+      },
+      "overridden_output": null,
+      "quality_flags": [],
+      "question_word_count": 26,
+      "finish_reason": "STOP",
+      "usage": {
+        "input_tokens": 1410,
+        "output_tokens": 508,
+        "thinking_tokens": 0,
+        "total_tokens": 1918
+      },
+      "prompt": "\nYou are an educational question-generation assistant.\n\nYour task is to generate one high-quality multi-hop analytical\nquestion using the two supplied textbook excerpts.\n\nWork through the following steps IN ORDER and write each step in\nits JSON field before writing the final question and answer key.\n\nStep 1 - Identify key concepts\n  concept_a: the key concept in Source A and its supporting facts.\n  concept_b: the key concept in Source B and its supporting facts.\n\nStep 2 - Identify unique contributions\n  unique_to_a: information needed for the question that appears\n               ONLY in Source A.\n  unique_to_b: information needed for the question that appears\n               ONLY in Source B.\n  If either is empty, return status \"insufficient_sources\".\n\nStep 3 - Determine the relationship\n  connection_type: one of \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\", or \"none\".\n  connection: how Source B relates to Source A (or the reverse),\n  stated only as far as both sources explicitly support it.\n  \"Both sources discuss X\" is a shared topic, not a relationship;\n  in that case set connection_type \"none\" and return status\n  \"insufficient_sources\".\n\nStep 4 - Design the question\n  question_design: a draft question, how it forces the learner to\n  use unique_to_a AND unique_to_b, and the targeted Bloom level\n  (apply, analyze, evaluate, or create).\n\nStep 5 - Check the draft\n  single_source_check: try to answer the draft using ONLY Source A,\n  then ONLY Source B. State what is missing each time. If either\n  source alone is enough, revise the draft before writing the\n  final question.\n\nStep 6 - Write the final output\n  question: the final (revised) question.\n  answer_key: the answer key, ending with the conclusion that only\n  the combination of both sources supports.\n\n\nGENERAL RULES\n\n1. Write all output fields in English.\n\n2. Generate exactly one open-ended analytical question.\n\n3. The question must require information from BOTH sources.\n   It must not be fully answerable from either source alone.\n   Every part of the question must depend on the combination,\n   not on one source with a detail from the other attached.\n\n4. The question must require analysis, explanation, comparison,\n   application, or evaluation rather than simple recall.\n\n5. Each source must contribute information that the other source\n   does not contain. If one source only repeats the other, return\n   status \"insufficient_sources\".\n\n6. The relationship between the sources must be specific: one\n   source \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\" the other. Sharing a topic is NOT a relationship.\n   If the only link is a shared topic, return\n   status \"insufficient_sources\".\n\n7. Do not merely place two facts side by side. The answer key must\n   state a conclusion that cannot be reached from either source\n   alone, and show how both sources lead to it.\n\n8. Use only facts, terms, and examples that appear in the sources.\n   Do not introduce concepts or terminology from outside the sources.\n   Do not exaggerate what the sources say.\n\n9. Do not state or imply that one concept causes, explains, or\n   leads to another unless the sources explicitly support that\n   relationship.\n\n10. The question must be self-contained, at most 40\n    words, and understandable without reading the sources.\n    Do not mention \"Source A\", \"Source B\", \"the text\", or \"the passage\".\n    Do not tell the learner how to structure the answer or which\n    ideas to combine.\n\n11. Source labels may be used in the answer key only.\n\n12. If the sources do not support a coherent analytical question\n    requiring both sources, return:\n    status = \"insufficient_sources\"\n    question = \"\"\n    answer_key = \"\"\n\n13. If status is \"success\", question and answer_key must both\n    contain meaningful text.\n\n14. Return only the structured JSON output required by the schema.\n\n\nNOW THE ACTUAL SOURCES\n\nSOURCE A\nChapter: 7\nSection: Cognition\n\nUpon waking each morning, you begin thinking—contemplating the tasks that you must complete that day. In what order should you run your errands? Should you go to the bank, the cleaners, or the grocery store first? Can you get these things done before you head to class or will they need to wait until school is done? These thoughts are one example of cognition at work. Exceptionally complex, cognition is an essential feature of human consciousness, yet not all aspects of cognition are consciously experienced.\n\nCognitive psychology is the field of psychology dedicated to examining how people think. It attempts to explain how and why we think the way we do by studying the interactions among human thinking, emotion, creativity, language, and problem solving, in addition to other cognitive processes. Cognitive psychologists strive to determine and measure different types of intelligence, why some people are better at problem solving than others, and how emotional intelligence affects success in the workplace, among countless other topics. They also sometimes focus on how we organize thoughts and information gathered from our environments into meaningful categories of thought, which will be discussed later.\n\n\nSOURCE B\nChapter: 1\nSection: Cognitive Psychology\n\nAs mentioned in the previous section, the cognitive revolution created an impetus for psychologists to focus their attention on better understanding the mind and mental processes that underlie behavior. Thus, cognitive psychology is the area of psychology that focuses on studying cognitions, or thoughts, and their relationship to our experiences and our actions. Like biological psychology, cognitive psychology is broad in its scope and often involves collaborations among people from a diverse range of disciplinary backgrounds. This has led some to coin the term cognitive science to describe the interdisciplinary nature of this area of research (Miller, 2003).\n\nCognitive psychologists have research interests that span a spectrum of topics, ranging from attention to problem solving to language to memory. The approaches used in studying these topics are equally diverse. Given such diversity, cognitive psychology is not captured in one chapter of this text per se; rather, various concepts related to cognitive psychology will be covered in relevant portions of the chapters in this text on sensation and perception, thinking and intelligence, memory, lifespan development, social psychology, and therapy.\n\n\nGenerate the output now.\n",
+      "raw_response": "{\n  \"status\": \"success\",\n  \"concept_a\": \"Cognition and cognitive psychology, focusing on how humans think, interactions among thinking, emotion, creativity, language, and problem solving, and organizing thoughts into categories.\",\n  \"concept_b\": \"Cognitive psychology as the study of cognitions or thoughts and their relationship to experiences and actions, and its broad, interdisciplinary nature leading to the term cognitive science.\",\n  \"unique_to_a\": \"Cognitive psychologists strive to determine and measure different types of intelligence, why some people are better at problem solving than others, and how emotional intelligence affects success in the workplace.\",\n  \"unique_to_b\": \"Cognitive psychology focuses on studying cognitions and their relationship to our experiences and our actions, and involves collaborations from diverse backgrounds leading to the term cognitive science.\",\n  \"connection_type\": \"extends\",\n  \"connection\": \"Source B extends the general definition and scope of cognitive psychology presented in Source A by introducing its interdisciplinary nature, termed cognitive science, and its specific focus on the relationship between thoughts, experiences, and actions.\",\n  \"question_design\": \"Draft: How do the measurement of intelligence and emotional intelligence in the workplace relate to the study of cognitions and their connection to experiences and actions? Target Bloom level: Analyze. Forces the use of unique details from both sources by combining workplace emotional intelligence/intelligence measurement with the study of thoughts, experiences, and actions.\",\n  \"single_source_check\": \"Source A alone lacks the explicit focus on the relationship between thoughts, experiences, and actions and the interdisciplinary term cognitive science. Source B alone lacks the specific details on measuring intelligence and emotional intelligence in the workplace. Neither source alone can answer the draft question.\",\n  \"question\": \"How does the study of cognitions in relation to experiences and actions encompass the measurement of intelligence and the impact of emotional intelligence on workplace success?\",\n  \"answer_key\": \"Source A establishes that cognitive psychology examines thinking, emotion, and problem solving, specifically striving to measure intelligence types and how emotional intelligence affects workplace success. Source B extends this by defining cognitive psychology as the study of cognitions and their relationship to experiences and actions, and notes its broad, interdisciplinary scope. Combining both sources leads to the conclusion that measuring intelligence and evaluating emotional intelligence in the workplace are applications of studying how internal thoughts and emotions relate to our external experiences and actions within a broad scientific framework.\"\n}",
+      "error": null
+    }
+  ]
+}

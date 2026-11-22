@@ -1,0 +1,142 @@
+{
+  "experiment": {
+    "created_at": "2026-10-28T19:51:08.271445+07:00",
+    "query": "Naturalistic Observation",
+    "book_title": "Psychology 2e",
+    "query_tokens": 3,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v5",
+    "language": "English",
+    "temperature": 1.0,
+    "thinking_config": {
+      "thinking_level": "minimal"
+    },
+    "few_shot": false,
+    "max_question_words": 40,
+    "variants": [
+      "non_cot",
+      "cot"
+    ]
+  },
+  "retrieval": {
+    "pair_evaluation": {
+      "chapter_distance": 4,
+      "pair_similarity": 0.5351669192314148,
+      "threshold": 0.5,
+      "threshold_status": "tested",
+      "chapter_condition": true,
+      "similarity_condition": true,
+      "is_valid": true,
+      "relevance_rule": "query_percentile >= 95.0",
+      "anchor_query_similarity": 0.6614330410957336,
+      "partner_query_similarity": 0.3927471339702606,
+      "anchor_query_percentile": 100.0,
+      "partner_query_percentile": 99.6547756041427,
+      "anchor_relevant": true,
+      "partner_relevant": true,
+      "is_relevant": true,
+      "is_valid_and_relevant": true,
+      "partner_ranking": "query",
+      "selection_info": {
+        "selection": "rank_then_evaluate",
+        "n_candidates": 20,
+        "n_candidates_above_threshold": null,
+        "fallback": false
+      }
+    },
+    "source_a": {
+      "vector_id": "psychology_2e_chunk_00057",
+      "chapter_number": 2,
+      "chapter_title": "Psychological Research",
+      "section": "Naturalistic Observation",
+      "query_similarity": 0.6614330410957336,
+      "query_percentile": 100.0,
+      "text": "It is critical that the observer be as unobtrusive and as inconspicuous as possible: when people know they are being watched, they are less likely to behave naturally. If you have any doubt about this, ask yourself how your driving behavior might differ in two situations: In the first situation, you are driving down a deserted highway during the middle of the day; in the second situation, you are being followed by a police car down the same deserted highway.\n\nIt should be pointed out that naturalistic observation is not limited to research involving humans. Indeed, some of the best-known examples of naturalistic observation involve researchers going into the field to observe various kinds of animals in their own environments. As with human studies, the researchers maintain their distance and avoid interfering with the animal subjects so as not to influence their natural behaviors. Scientists have used this technique to study social hierarchies and interactions among animals ranging from ground squirrels to gorillas. The information provided by these studies is invaluable in understanding how those animals organize socially and communicate with one another. The anthropologist Jane Goodall, for example, spent nearly five decades observing the behavior of chimpanzees in Africa. As an illustration of the types of concerns that a researcher might encounter in naturalistic observation, some scientists criticized Goodall for giving the chimps names instead of referring to them by numbers—using names was thought to undermine the emotional detachment required for the objectivity of the study (McKie, 2010).\n\nThe greatest benefit of naturalistic observation is the validity, or accuracy, of information collected unobtrusively in a natural setting. Having individuals behave as they normally would in a given situation means that we have a higher degree of ecological validity, or realism, than we might achieve with other research approaches. Therefore, our ability to generalize the findings of the research to real-world situations is enhanced. If done correctly, we need not worry about people or animals modifying their behavior simply because they are being observed. Sometimes, people may assume that reality programs give us a glimpse into authentic human behavior. However, the principle of inconspicuous observation is violated as reality stars are followed by camera crews and are interviewed on camera for personal confessionals. Given that environment, we must doubt how natural and realistic their behaviors are."
+    },
+    "source_b": {
+      "vector_id": "psychology_2e_chunk_00249",
+      "chapter_number": 6,
+      "chapter_title": "Learning",
+      "section": "What Is Learning?",
+      "query_similarity": 0.3927471339702606,
+      "query_percentile": 99.6547756041427,
+      "text": "Observational learning extends the effective range of both classical and operant conditioning. In contrast to classical and operant conditioning, in which learning occurs only through direct experience, observational learning is the process of watching others and then imitating what they do. A lot of learning among humans and other animals comes from observational learning. To get an idea of the extra effective range that observational learning brings, consider Ben and his son Julian from the introduction. How might observation help Julian learn to surf, as opposed to learning by trial and error alone? By watching his father, he can imitate the moves that bring success and avoid the moves that lead to failure. Can you think of something you have learned how to do after watching someone else?\n\nAll of the approaches covered in this chapter are part of a particular tradition in psychology, called behaviorism, which we discuss in the next section. However, these approaches do not represent the entire study of learning. Separate traditions of learning have taken shape within different fields of psychology, such as memory and cognition, so you will find that other chapters will round out your understanding of the topic. Over time these traditions tend to converge. For example, in this chapter you will see how cognition has come to play a larger role in behaviorism, whose more extreme adherents once insisted that behaviors are triggered by the environment with no intervening thought."
+    }
+  },
+  "skipped_reason": null,
+  "results": [
+    {
+      "variant": "non_cot",
+      "query": "Naturalistic Observation",
+      "model_requested": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "v5",
+      "language": "English",
+      "temperature": 1.0,
+      "thinking_config": {
+        "thinking_level": "minimal"
+      },
+      "few_shot": false,
+      "max_question_words": 40,
+      "status": "insufficient_sources",
+      "question": "",
+      "answer_key": "",
+      "reasoning": null,
+      "overridden_output": null,
+      "quality_flags": [],
+      "question_word_count": 0,
+      "finish_reason": "STOP",
+      "usage": {
+        "input_tokens": 1322,
+        "output_tokens": 28,
+        "thinking_tokens": 0,
+        "total_tokens": 1350
+      },
+      "prompt": "\nYou are an educational question-generation assistant.\n\nYour task is to generate one high-quality multi-hop analytical\nquestion using the two supplied textbook excerpts.\n\nRead both sources and directly produce the final question and\nits answer key.\n\nOUTPUT FIELDS\n- status\n- question\n- answer_key\n\n\nGENERAL RULES\n\n1. Write all output fields in English.\n\n2. Generate exactly one open-ended analytical question.\n\n3. The question must require information from BOTH sources.\n   It must not be fully answerable from either source alone.\n   Every part of the question must depend on the combination,\n   not on one source with a detail from the other attached.\n\n4. The question must require analysis, explanation, comparison,\n   application, or evaluation rather than simple recall.\n\n5. Each source must contribute information that the other source\n   does not contain. If one source only repeats the other, return\n   status \"insufficient_sources\".\n\n6. The relationship between the sources must be specific: one\n   source \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\" the other. Sharing a topic is NOT a relationship.\n   If the only link is a shared topic, return\n   status \"insufficient_sources\".\n\n7. Do not merely place two facts side by side. The answer key must\n   state a conclusion that cannot be reached from either source\n   alone, and show how both sources lead to it.\n\n8. Use only facts, terms, and examples that appear in the sources.\n   Do not introduce concepts or terminology from outside the sources.\n   Do not exaggerate what the sources say.\n\n9. Do not state or imply that one concept causes, explains, or\n   leads to another unless the sources explicitly support that\n   relationship.\n\n10. The question must be self-contained, at most 40\n    words, and understandable without reading the sources.\n    Do not mention \"Source A\", \"Source B\", \"the text\", or \"the passage\".\n    Do not tell the learner how to structure the answer or which\n    ideas to combine.\n\n11. Source labels may be used in the answer key only.\n\n12. If the sources do not support a coherent analytical question\n    requiring both sources, return:\n    status = \"insufficient_sources\"\n    question = \"\"\n    answer_key = \"\"\n\n13. If status is \"success\", question and answer_key must both\n    contain meaningful text.\n\n14. Return only the structured JSON output required by the schema.\n\n\nNOW THE ACTUAL SOURCES\n\nSOURCE A\nChapter: 2\nSection: Naturalistic Observation\n\nIt is critical that the observer be as unobtrusive and as inconspicuous as possible: when people know they are being watched, they are less likely to behave naturally. If you have any doubt about this, ask yourself how your driving behavior might differ in two situations: In the first situation, you are driving down a deserted highway during the middle of the day; in the second situation, you are being followed by a police car down the same deserted highway.\n\nIt should be pointed out that naturalistic observation is not limited to research involving humans. Indeed, some of the best-known examples of naturalistic observation involve researchers going into the field to observe various kinds of animals in their own environments. As with human studies, the researchers maintain their distance and avoid interfering with the animal subjects so as not to influence their natural behaviors. Scientists have used this technique to study social hierarchies and interactions among animals ranging from ground squirrels to gorillas. The information provided by these studies is invaluable in understanding how those animals organize socially and communicate with one another. The anthropologist Jane Goodall, for example, spent nearly five decades observing the behavior of chimpanzees in Africa. As an illustration of the types of concerns that a researcher might encounter in naturalistic observation, some scientists criticized Goodall for giving the chimps names instead of referring to them by numbers—using names was thought to undermine the emotional detachment required for the objectivity of the study (McKie, 2010).\n\nThe greatest benefit of naturalistic observation is the validity, or accuracy, of information collected unobtrusively in a natural setting. Having individuals behave as they normally would in a given situation means that we have a higher degree of ecological validity, or realism, than we might achieve with other research approaches. Therefore, our ability to generalize the findings of the research to real-world situations is enhanced. If done correctly, we need not worry about people or animals modifying their behavior simply because they are being observed. Sometimes, people may assume that reality programs give us a glimpse into authentic human behavior. However, the principle of inconspicuous observation is violated as reality stars are followed by camera crews and are interviewed on camera for personal confessionals. Given that environment, we must doubt how natural and realistic their behaviors are.\n\n\nSOURCE B\nChapter: 6\nSection: What Is Learning?\n\nObservational learning extends the effective range of both classical and operant conditioning. In contrast to classical and operant conditioning, in which learning occurs only through direct experience, observational learning is the process of watching others and then imitating what they do. A lot of learning among humans and other animals comes from observational learning. To get an idea of the extra effective range that observational learning brings, consider Ben and his son Julian from the introduction. How might observation help Julian learn to surf, as opposed to learning by trial and error alone? By watching his father, he can imitate the moves that bring success and avoid the moves that lead to failure. Can you think of something you have learned how to do after watching someone else?\n\nAll of the approaches covered in this chapter are part of a particular tradition in psychology, called behaviorism, which we discuss in the next section. However, these approaches do not represent the entire study of learning. Separate traditions of learning have taken shape within different fields of psychology, such as memory and cognition, so you will find that other chapters will round out your understanding of the topic. Over time these traditions tend to converge. For example, in this chapter you will see how cognition has come to play a larger role in behaviorism, whose more extreme adherents once insisted that behaviors are triggered by the environment with no intervening thought.\n\n\nGenerate the final output now.\n",
+      "raw_response": "{\n  \"status\": \"insufficient_sources\",\n  \"question\": \"\",\n  \"answer_key\": \"\"\n}",
+      "error": null
+    },
+    {
+      "variant": "cot",
+      "query": "Naturalistic Observation",
+      "model_requested": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "v5",
+      "language": "English",
+      "temperature": 1.0,
+      "thinking_config": {
+        "thinking_level": "minimal"
+      },
+      "few_shot": false,
+      "max_question_words": 40,
+      "status": "insufficient_sources",
+      "question": "",
+      "answer_key": "",
+      "reasoning": {
+        "concept_a": "Naturalistic observation requires observers to remain unobtrusive and inconspicuous so that humans or animals behave naturally, ensuring ecological validity and avoiding the modification of behavior caused by being watched.",
+        "concept_b": "Observational learning is the process of watching others and imitating their actions, which extends the range of learning beyond direct experience, classical conditioning, and operant conditioning.",
+        "unique_to_a": "Guidelines and benefits of naturalistic observation, such as ecological validity, avoiding behavior modification from being watched, and the necessity of researcher detachment.",
+        "unique_to_b": "The definition of observational learning as watching and imitating others to learn by observing successes and failures rather than relying solely on trial and error or direct experience.",
+        "connection_type": "none",
+        "connection": "Both sources discuss forms of observation involving humans and animals, but they address entirely different topics: one covers a research method for studying natural behavior without interference, while the other covers a behavioral learning process through watching and imitating others.",
+        "question_design": "The sources share a common focus on observation in humans and animals but discuss unrelated psychological concepts (research methodology versus learning theory), making it impossible to form a coherent multi-hop analytical question.",
+        "single_source_check": "The sources do not have a genuine relationship beyond the shared word observation, so no multi-hop question can be constructed."
+      },
+      "overridden_output": null,
+      "quality_flags": [],
+      "question_word_count": 0,
+      "finish_reason": "STOP",
+      "usage": {
+        "input_tokens": 1704,
+        "output_tokens": 324,
+        "thinking_tokens": 0,
+        "total_tokens": 2028
+      },
+      "prompt": "\nYou are an educational question-generation assistant.\n\nYour task is to generate one high-quality multi-hop analytical\nquestion using the two supplied textbook excerpts.\n\nWork through the following steps IN ORDER and write each step in\nits JSON field before writing the final question and answer key.\n\nStep 1 - Identify key concepts\n  concept_a: the key concept in Source A and its supporting facts.\n  concept_b: the key concept in Source B and its supporting facts.\n\nStep 2 - Identify unique contributions\n  unique_to_a: information needed for the question that appears\n               ONLY in Source A.\n  unique_to_b: information needed for the question that appears\n               ONLY in Source B.\n  If either is empty, return status \"insufficient_sources\".\n\nStep 3 - Determine the relationship\n  connection_type: one of \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\", or \"none\".\n  connection: how Source B relates to Source A (or the reverse),\n  stated only as far as both sources explicitly support it.\n  \"Both sources discuss X\" is a shared topic, not a relationship;\n  in that case set connection_type \"none\" and return status\n  \"insufficient_sources\".\n\nStep 4 - Design the question\n  question_design: a draft question, how it forces the learner to\n  use unique_to_a AND unique_to_b, and the targeted Bloom level\n  (apply, analyze, evaluate, or create).\n\nStep 5 - Check the draft\n  single_source_check: try to answer the draft using ONLY Source A,\n  then ONLY Source B. State what is missing each time. If either\n  source alone is enough, revise the draft before writing the\n  final question.\n\nStep 6 - Write the final output\n  question: the final (revised) question.\n  answer_key: the answer key, ending with the conclusion that only\n  the combination of both sources supports.\n\n\nGENERAL RULES\n\n1. Write all output fields in English.\n\n2. Generate exactly one open-ended analytical question.\n\n3. The question must require information from BOTH sources.\n   It must not be fully answerable from either source alone.\n   Every part of the question must depend on the combination,\n   not on one source with a detail from the other attached.\n\n4. The question must require analysis, explanation, comparison,\n   application, or evaluation rather than simple recall.\n\n5. Each source must contribute information that the other source\n   does not contain. If one source only repeats the other, return\n   status \"insufficient_sources\".\n\n6. The relationship between the sources must be specific: one\n   source \"qualifies\", \"explains the mechanism of\", \"is an example or application of\", \"contrasts with\", \"extends\" the other. Sharing a topic is NOT a relationship.\n   If the only link is a shared topic, return\n   status \"insufficient_sources\".\n\n7. Do not merely place two facts side by side. The answer key must\n   state a conclusion that cannot be reached from either source\n   alone, and show how both sources lead to it.\n\n8. Use only facts, terms, and examples that appear in the sources.\n   Do not introduce concepts or terminology from outside the sources.\n   Do not exaggerate what the sources say.\n\n9. Do not state or imply that one concept causes, explains, or\n   leads to another unless the sources explicitly support that\n   relationship.\n\n10. The question must be self-contained, at most 40\n    words, and understandable without reading the sources.\n    Do not mention \"Source A\", \"Source B\", \"the text\", or \"the passage\".\n    Do not tell the learner how to structure the answer or which\n    ideas to combine.\n\n11. Source labels may be used in the answer key only.\n\n12. If the sources do not support a coherent analytical question\n    requiring both sources, return:\n    status = \"insufficient_sources\"\n    question = \"\"\n    answer_key = \"\"\n\n13. If status is \"success\", question and answer_key must both\n    contain meaningful text.\n\n14. Return only the structured JSON output required by the schema.\n\n\nNOW THE ACTUAL SOURCES\n\nSOURCE A\nChapter: 2\nSection: Naturalistic Observation\n\nIt is critical that the observer be as unobtrusive and as inconspicuous as possible: when people know they are being watched, they are less likely to behave naturally. If you have any doubt about this, ask yourself how your driving behavior might differ in two situations: In the first situation, you are driving down a deserted highway during the middle of the day; in the second situation, you are being followed by a police car down the same deserted highway.\n\nIt should be pointed out that naturalistic observation is not limited to research involving humans. Indeed, some of the best-known examples of naturalistic observation involve researchers going into the field to observe various kinds of animals in their own environments. As with human studies, the researchers maintain their distance and avoid interfering with the animal subjects so as not to influence their natural behaviors. Scientists have used this technique to study social hierarchies and interactions among animals ranging from ground squirrels to gorillas. The information provided by these studies is invaluable in understanding how those animals organize socially and communicate with one another. The anthropologist Jane Goodall, for example, spent nearly five decades observing the behavior of chimpanzees in Africa. As an illustration of the types of concerns that a researcher might encounter in naturalistic observation, some scientists criticized Goodall for giving the chimps names instead of referring to them by numbers—using names was thought to undermine the emotional detachment required for the objectivity of the study (McKie, 2010).\n\nThe greatest benefit of naturalistic observation is the validity, or accuracy, of information collected unobtrusively in a natural setting. Having individuals behave as they normally would in a given situation means that we have a higher degree of ecological validity, or realism, than we might achieve with other research approaches. Therefore, our ability to generalize the findings of the research to real-world situations is enhanced. If done correctly, we need not worry about people or animals modifying their behavior simply because they are being observed. Sometimes, people may assume that reality programs give us a glimpse into authentic human behavior. However, the principle of inconspicuous observation is violated as reality stars are followed by camera crews and are interviewed on camera for personal confessionals. Given that environment, we must doubt how natural and realistic their behaviors are.\n\n\nSOURCE B\nChapter: 6\nSection: What Is Learning?\n\nObservational learning extends the effective range of both classical and operant conditioning. In contrast to classical and operant conditioning, in which learning occurs only through direct experience, observational learning is the process of watching others and then imitating what they do. A lot of learning among humans and other animals comes from observational learning. To get an idea of the extra effective range that observational learning brings, consider Ben and his son Julian from the introduction. How might observation help Julian learn to surf, as opposed to learning by trial and error alone? By watching his father, he can imitate the moves that bring success and avoid the moves that lead to failure. Can you think of something you have learned how to do after watching someone else?\n\nAll of the approaches covered in this chapter are part of a particular tradition in psychology, called behaviorism, which we discuss in the next section. However, these approaches do not represent the entire study of learning. Separate traditions of learning have taken shape within different fields of psychology, such as memory and cognition, so you will find that other chapters will round out your understanding of the topic. Over time these traditions tend to converge. For example, in this chapter you will see how cognition has come to play a larger role in behaviorism, whose more extreme adherents once insisted that behaviors are triggered by the environment with no intervening thought.\n\n\nGenerate the output now.\n",
+      "raw_response": "{\n  \"status\": \"insufficient_sources\",\n  \"concept_a\": \"Naturalistic observation requires observers to remain unobtrusive and inconspicuous so that humans or animals behave naturally, ensuring ecological validity and avoiding the modification of behavior caused by being watched.\",\n  \"concept_b\": \"Observational learning is the process of watching others and imitating their actions, which extends the range of learning beyond direct experience, classical conditioning, and operant conditioning.\",\n  \"unique_to_a\": \"Guidelines and benefits of naturalistic observation, such as ecological validity, avoiding behavior modification from being watched, and the necessity of researcher detachment.\",\n  \"unique_to_b\": \"The definition of observational learning as watching and imitating others to learn by observing successes and failures rather than relying solely on trial and error or direct experience.\",\n  \"connection_type\": \"none\",\n  \"connection\": \"Both sources discuss forms of observation involving humans and animals, but they address entirely different topics: one covers a research method for studying natural behavior without interference, while the other covers a behavioral learning process through watching and imitating others.\",\n  \"question_design\": \"The sources share a common focus on observation in humans and animals but discuss unrelated psychological concepts (research methodology versus learning theory), making it impossible to form a coherent multi-hop analytical question.\",\n  \"single_source_check\": \"The sources do not have a genuine relationship beyond the shared word observation, so no multi-hop question can be constructed.\",\n  \"question\": \"\",\n  \"answer_key\": \"\"\n}",
+      "error": null
+    }
+  ]
+}
